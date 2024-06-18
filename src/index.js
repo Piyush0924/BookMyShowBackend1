@@ -1,6 +1,6 @@
 
 
-
+const path=require("path");
 require("dotenv").config(); // Load environment variables
 const express = require("express");
 const cors = require("cors");
@@ -22,6 +22,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/index.html"));
 });
+
+
 app.use("/api", bookingRoutes); // Use the booking routes
 
 // Start the server
