@@ -9,7 +9,7 @@ const mongoURI = process.env.MONGODB_URL;
 // Function to connect to MongoDB using the Mongoose library
 const connectToMongo = async () => {
   try {
-    await mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+    await mongoose.connect(mongoURI, {  });
     console.log("Connection established with MongoDB server online");
   } catch (err) {
     console.error("Error while connecting to MongoDB", err);
